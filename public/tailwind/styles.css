@@ -1841,12 +1841,6 @@ html:has(.drawer-toggle:checked) {
   height: -moz-max-content;
   height: max-content;
 }
-.h-\[max\] {
-  height: max;
-}
-.h-\[10\] {
-  height: 10;
-}
 .min-h-full {
   min-height: 100%;
 }
@@ -1871,9 +1865,6 @@ html:has(.drawer-toggle:checked) {
 .w-\[90\%\] {
   width: 90%;
 }
-.w-\[95\%\] {
-  width: 95%;
-}
 .w-full {
   width: 100%;
 }
@@ -1884,14 +1875,29 @@ html:has(.drawer-toggle:checked) {
 .w-screen {
   width: 100vw;
 }
-.w-auto {
-  width: auto;
-}
 .w-\[10\%\] {
   width: 10%;
 }
+.w-\[45\%\] {
+  width: 45%;
+}
+.w-\[50\%\] {
+  width: 50%;
+}
 .flex-none {
   flex: none;
+}
+.basis-1\/4 {
+  flex-basis: 25%;
+}
+.basis-1\/5 {
+  flex-basis: 20%;
+}
+.basis-1\/2 {
+  flex-basis: 50%;
+}
+.basis-2\/5 {
+  flex-basis: 40%;
 }
 .flex-row {
   flex-direction: row;
@@ -1940,9 +1946,6 @@ html:has(.drawer-toggle:checked) {
 }
 .gap-8 {
   gap: 2rem;
-}
-.gap-6 {
-  gap: 1.5rem;
 }
 .rounded {
   border-radius: 0.25rem;
@@ -2280,17 +2283,12 @@ html:has(.drawer-toggle:checked) {
   .sm\:w-\[100\%\] {
     width: 100%;
   }
-
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 }
 
 @media (min-width: 768px) {
 
-  .md\:w-\[100\%\] {
-    width: 100%;
+  .md\:w-\[10\%\] {
+    width: 10%;
   }
 
   .md\:w-\[30\%\] {
@@ -2303,6 +2301,22 @@ html:has(.drawer-toggle:checked) {
 
   .md\:w-\[40\%\] {
     width: 40%;
+  }
+
+  .md\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .md\:w-\[33\%\] {
+    width: 33%;
+  }
+
+  .md\:w-\[55\%\] {
+    width: 55%;
+  }
+
+  .md\:w-\[45\%\] {
+    width: 45%;
   }
 
   .md\:flex-row {
@@ -2337,10 +2351,6 @@ html:has(.drawer-toggle:checked) {
     display: none;
   }
 
-  .lg\:h-\[100\%\] {
-    height: 100%;
-  }
-
   .lg\:w-\[100\%\] {
     width: 100%;
   }
@@ -2353,12 +2363,12 @@ html:has(.drawer-toggle:checked) {
     width: 45%;
   }
 
-  .lg\:w-\[60\%\] {
-    width: 60%;
-  }
-
   .lg\:w-\[50\%\] {
     width: 50%;
+  }
+
+  .lg\:w-\[60\%\] {
+    width: 60%;
   }
 
   .lg\:flex-row {
@@ -2371,10 +2381,6 @@ html:has(.drawer-toggle:checked) {
 
   .lg\:items-stretch {
     align-items: stretch;
-  }
-
-  .lg\:justify-stretch {
-    justify-content: stretch;
   }
 
   .lg\:text-lg {
