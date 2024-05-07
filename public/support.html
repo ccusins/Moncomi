@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="./tailwind/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+    <title>Moncomi</title>
+</head>
+<body class="w-screen flex flex-col items-center">
+    <div class="w-[90%] flex flex-row gap-4 justify-center px-8 py-4">
+        <button class="px-4 py-2 bg-white text-black font-bold rounded">All Orders</button>
+        <button class="px-4 py-2 border border-white text-white font-bold rounded">Replied Orders</button>
+        <button class="px-4 py-2 border border-white text-white font-bold rounded">Unreplied Orders</button>
+        <button class="px-4 py-2 border border-white text-white font-bold rounded">User List</button>
+        <button class="px-4 py-2 border border-white text-white font-bold rounded">Create Email</button>
+        
+    </div>
+    <!-- <div class="bg-green-400"></div>
+    <div class="bg-white"></div>
+    <div class="px-2 p-2 py-2"></div>
+    <div class="bg-orange-400"></div>
+    <div class="bg-zinc-900"></div>
+    <div class="border-zinc-700"></div> -->
+    <div hx-get="/moncomiapi/getorders" hx-trigger="load" hx-swap="innerHTML" class="flex flex-wrap gap-4 w-[100%] px-8 py-16">
+    </div>
+</body>
+</html>

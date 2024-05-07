@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="./tailwind/styles.css" rel="stylesheet">
+    <title>Moncomi</title>
+</head>
+<body class="flex flex-col">
+  <div class="drawer">
+    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
+    <div class="drawer-content flex flex-col">
+      <div class="w-full navbar bg-black py-4">
+        <div class="flex-none lg:hidden">
+          <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-justify"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+          </label>
+        </div> 
+        <div class="flex-none hidden lg:block">
+          <ul class="menu menu-horizontal px-16">
+            <li><a href="/" class="text-white text-2xl">Home</a></li>
+            <li><a href="/candles" class="text-white text-2xl">Candles</a></li>
+            <li><a href="/diffusers" class="text-white text-2xl">Diffusers</a></li>
+            <li><a href="/votives" class="text-white text-2xl">Mini Votives</a></li>
+            <li><a href="/3wick" class="text-white text-2xl">3-Wick Candles</a></li>
+          </ul>
+        </div>
+      </div>    
+    </div> 
+    <div class="drawer-side">
+      <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
+      <ul class="menu px-8 py-16 w-80 min-h-full bg-black gap-4">
+        <li><a href="/" class="text-white text-2xl">Home</a></li>
+        <li><a href="/candles" class="text-white text-2xl">Candles</a></li>
+        <li><a href="/diffusers" class="text-white text-2xl">Diffusers</a></li>
+        <li><a href="/votives" class="text-white text-2xl">Mini Votives</a></li>
+        <li><a href="/3wick" class="text-white text-2xl">3-Wick Candles</a></li>
+        <div class="h-[1px] bg-white rounded w-[80%]"></div>
+        <p class="text-white text-lg font-bold">info@moncomi.com</p>
+      </ul>
+    </div>
+</div>
+
+    <div class="flex flex-row flex-wrap w-[100%] items-center justify-center py-8 gap-12">
+        <a href='/candlestpc' class="flex flex-col gap-4 w-[90%] md:w-[40%] items-center transition-transform duration-200 hover:scale-[102%]">
+            <img class="border border-black rounded w-[80%]" src="./images/tpcCandle/hero.jpg" alt="">
+            <div class="text-black text-2xl font-bold">Tonka, Patchouli & Cedar</div>
+            <div class="text-black text-lg font-bold">300 ml</div>
+            <div class="text-black text-lg">£30</div>
+        </a>
+        <a href='/candlesore' class="flex flex-col gap-4 w-[90%] md:w-[40%] items-center transition-transform duration-200 hover:scale-[102%]">
+            <img class="border border-black rounded w-[80%]" src="./images/tpcCandle/hero.jpg" alt="">
+            <div class="text-black text-2xl font-bold">Orange, Rosemary & Eucalyptus</div>
+            <div class="text-black text-lg font-bold">300 ml</div>
+            <div class="text-black text-lg">£30</div>
+        </a>
+        <a href='/candleshom' class="flex flex-col gap-4 w-[90%] md:w-[40%] items-center transition-transform duration-200 hover:scale-[102%]">
+            <img class="border border-black rounded w-[80%]" src="./images/tpcCandle/hero.jpg" alt="">
+            <div class="text-black text-2xl font-bold">Honeysuckle, Orris & Musk</div>
+            <div class="text-black text-lg font-bold">300 ml</div>
+            <div class="text-black text-lg">£30</div>
+        </a>
+        <a href='/candlesvro' class="flex flex-col gap-4 w-[90%] md:w-[40%] items-center transition-transform duration-200 hover:scale-[102%]">
+            <img class="border border-black rounded w-[80%]" src="./images/vroCandle/hero.jpg" alt="">
+            <div class="text-black text-2xl font-bold">Velvet Rose & Oud</div>
+            <div class="text-black text-lg font-bold">300 ml</div>
+            <div class="text-black text-lg">£30</div>
+        </a>
+    </div>
+</body>
+</html>
