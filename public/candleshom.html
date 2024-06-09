@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link href="./tailwind/styles.css" rel="stylesheet">
-    <script defer="" src="js/imgSwitch.js"></script>
     <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
     <title>Moncomi</title>
 </head>
@@ -51,26 +50,19 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
       <div class="text-black text-lg">Back</div>
     </a>
-    <div class="flex flex-row flex-wrap w-[100%] h-max justify-center py-16 gap-16 items-stretch px-8">
-      <div class="flex flex-col w-[100%] md:w-[40%] gap-4 items-center">
-            <img id='hero' class="w-[90%] rounded border border-black" src="./images/tpcCandle/hero.jpg" alt="">
-            <img id='side1' class="w-[90%] rounded border border-black hidden" src="./images/tpcCandle/side1.jpg" alt="">
-            <img id='side2' class="w-[90%] rounded border border-black hidden" src="./images/tpcCandle/side2.jpg" alt="">
-            <div class="flex flex-row gap-4 w-[90%]">
-              <img id='heroSM' class="w-[20%] rounded border border-black transition-transform duration-200 hover:scale-[102%]" src="./images/tpcCandle/hero.jpg" alt="">
-              <img id='side1SM' class="w-[30%] rounded border border-black opacity-50 transition-transform duration-200 hover:scale-[102%]" src="./images/tpcCandle/side1.jpg" alt="">
-              <img id='side2SM' class="w-[20%] rounded border border-black opacity-50 transition-transform duration-200 hover:scale-[102%]" src="./images/tpcCandle/side2.jpg" alt="">
-            </div>
-        </div>
-        <div class="flex flex-col w-[100%] lg:w-[50%] gap-16 items-center px-8">
+    <div class="flex flex-col lg:flex-row gap-8 w-[100%] py-16 items-stretch justify-stretch px-8">
+      
+      <img id='hero' class="w-[100%] lg:w-[45%] rounded border border-black" src="./images/tpcCandle/hero.jpg" alt="">
+
+        <div class="flex flex-col w-[100%] lg:w-[55%] gap-8 items-between justify-between px-8">
             <div class="flex flex-col gap-4 w-[100%]">
-                <div class="text-black text-3xl font-bold">Honeysuckle, Orris & Musk</div>
-                <div class="text-black text-2xl font-bold">300 ml</div>
-                <div class="text-black text-2xl">£30</div>
-                <div class="text-black text-lg w-[90%] lg:w-[100%]">Average Burn Time Of 40 Hours</div>
+                <div class="text-black text-3xl font-bold align-center">Honeysuckle, Orris & Musk</div>
+                <div class="text-black text-2xl font-bold align-center">300 ml</div>
+                <div class="text-black text-2xl align-center">£30</div>
+                <div class="text-black text-lg w-[90%] lg:w-[100%] align-center">Average Burn Time Of 40 Hours</div>
             </div>
             
-            <div class="text-black text-lg w-[100%] lg:mb-8">Indulge in the warming scent of this luxury candle, carefully crafted to create an aroma that’s both elegant and aromatic. Feel the warmth as soft notes of the intoxicating honeysuckle blended with orange blossom and powdery orris with a subtle hint of tonka, musk and amber fill your home.</div>
+            <div class="text-black text-lg w-[100%] lg:mb-8 text-justify">Indulge in the warming scent of this luxury candle, carefully crafted to create an aroma that’s both elegant and aromatic. Feel the warmth as soft notes of the intoxicating honeysuckle blended with orange blossom and powdery orris with a subtle hint of tonka, musk and amber fill your home.</div>
 
             <div class="flex md:flex-row flex-col justify-between bg-gray-150 rounded gap-4 py-4 px-8 border border-black w-[100%]">
               <div class="flex flex-col gap-4 items-center w-[90%] md:w-[30%]">
@@ -105,9 +97,11 @@
       </form>
       <div class="w-[90%] lg:w-[45%] border border-black rounded px-8 py-8 flex flex-col items-start justify-between gap-8">
         <div class="text-black text-3xl font-bold">Care Instructions</div>
-        <div class="text-black text-lg">Light your candle in a room away from drafts which can cause sooting or rapid, uneven burning.</div>
-        <div class="text-black text-lg">Trim the wick to 5mm after each burn to ensure an even burn and to maximise scent throw from your candle.</div>
-        <div class="text-black text-lg">The first time you light your candle please let it burn for at least 3 hours until the wax has pooled to the edges to avoid tunnelling.</div>
+        <div class="text-black text-lg text-justify">Light your candle in a room away from drafts which can cause sooting or rapid, uneven burning.</div>
+        <div class="text-black text-lg text-justify">The first time you light your candle please let it burn for at least 3 hours until the wax has pooled to the edges to avoid tunnelling.</div>
+        <div class="text-black text-lg text-justify">Trim the wick to 5mm after each burn to ensure an even burn and to maximise scent throw from your candle.</div>
+        <div class="text-black text-lg text-justify">Keep the wax pool clear of wick trimmings and matches, as debris in the wax can act as a secondary wick encouraging, your candle to burn faster.</div>
+        <div class="text-black text-lg text-justify">Make sure you stop burning your candle when 10 mm of wax remains at the bottom, keeping an eye on a burning candle when the wax is low.</div>
       </div>
     </div>
 </body>

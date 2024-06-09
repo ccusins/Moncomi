@@ -1822,9 +1822,6 @@ html:has(.drawer-toggle:checked) {
 .mt-8 {
   margin-top: 2rem;
 }
-.inline-block {
-  display: inline-block;
-}
 .flex {
   display: flex;
 }
@@ -1859,6 +1856,9 @@ html:has(.drawer-toggle:checked) {
 .w-\[40\%\] {
   width: 40%;
 }
+.w-\[50\%\] {
+  width: 50%;
+}
 .w-\[80\%\] {
   width: 80%;
 }
@@ -1875,8 +1875,11 @@ html:has(.drawer-toggle:checked) {
 .w-screen {
   width: 100vw;
 }
-.w-\[50\%\] {
-  width: 50%;
+.w-\[90\%\%\] {
+  width: 90%%;
+}
+.w-\[45\%\] {
+  width: 45%;
 }
 .flex-none {
   flex: none;
@@ -2344,6 +2347,14 @@ html:has(.drawer-toggle:checked) {
     width: 60%;
   }
 
+  .lg\:w-\[55\%\] {
+    width: 55%;
+  }
+
+  .lg\:w-\[35\%\] {
+    width: 35%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -2352,12 +2363,25 @@ html:has(.drawer-toggle:checked) {
     flex-direction: column;
   }
 
+  .lg\:items-center {
+    align-items: center;
+  }
+
   .lg\:items-stretch {
     align-items: stretch;
   }
 
-  .lg\:gap-12 {
-    gap: 3rem;
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
+  .lg\:justify-stretch {
+    justify-content: stretch;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
