@@ -1856,9 +1856,6 @@ html:has(.drawer-toggle:checked) {
 .w-\[40\%\] {
   width: 40%;
 }
-.w-\[45\%\] {
-  width: 45%;
-}
 .w-\[80\%\] {
   width: 80%;
 }
@@ -1973,12 +1970,26 @@ html:has(.drawer-toggle:checked) {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-4 {
+  padding: 1rem;
+}
+.p-1 {
+  padding: 0.25rem;
 }
 .px-16 {
   padding-left: 4rem;
@@ -2331,10 +2342,6 @@ html:has(.drawer-toggle:checked) {
 
   .lg\:w-\[45\%\] {
     width: 45%;
-  }
-
-  .lg\:w-\[50\%\] {
-    width: 50%;
   }
 
   .lg\:w-\[55\%\] {
