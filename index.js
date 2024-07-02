@@ -84,17 +84,19 @@ app.get('/moncomiapi/createorder', async(req, res) => {
     const item = req.query.item;
     const message = req.query.text;
 
-    console.log(text);
+    console.log(message);
 
-    // try {
+    try {
 
-    //     await axios.get(`https://moncomi.pythonanywhere.com/createorder/${name}/${phone}/${email}/${item}`)
+        await axios.get(`https://moncomi.pythonanywhere.com/createorder/${name}/${phone}/${email}/${item}/${message}`)
 
-    //     res.send(`<div class="border border-green-400 px-8 py-4 rounded text-white text-lg font-bold">Your enquiry was successfully receieved! Expect a text or email ASAP.</div>`)
+        res.send(`<div class="border border-green-400 px-8 py-4 rounded text-white text-lg font-bold">Your enquiry was successfully receieved! Expect a text or email ASAP.</div>`)
 
-    // } catch(error) {
-    //     res.send(`<div class="border border-red-400 px-8 py-4 rounded text-white text-lg font-bold">There was an error receiving your enquiry, please refresh and try again.</div>`)
-    // }
+    } catch(error) {
+
+        res.send(`<div class="border border-red-400 px-8 py-4 rounded text-white text-lg font-bold">There was an error receiving your enquiry, please refresh and try again.</div>`)
+
+    }
 
 });
 
@@ -164,6 +166,11 @@ app.get('/moncomiapi/getorders', async(req, res) => {
         <div class="flex flex-row gap-4">
             <div class="text-white text-lg font-bold">Product:</div>
             <div class="text-white text-lg">${order.item}</div>
+        </div>
+
+        <div class="flex flex-row gap-4">
+            <div class="text-white text-lg font-bold">Message:</div>
+            <div class="text-white text-lg">${order.message}</div>
         </div>
     </div>
         `
