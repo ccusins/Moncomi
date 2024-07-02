@@ -2345,6 +2345,10 @@ html:has(.drawer-toggle:checked) {
     width: 60%;
   }
 
+  .lg\:w-\[4505\%\] {
+    width: 4505%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
