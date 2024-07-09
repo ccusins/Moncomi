@@ -1,7 +1,11 @@
+require("dotenv").config();
 const express = require('express');
 const app = express();
 const path = require('path');
 const axios = require('axios');
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const twilioClient = require('twilio')(accountSid, authToken);
 app.use(express.static('public'));
   
 app.get('/', (req, res) => {
@@ -75,7 +79,7 @@ app.get('/votives', (req, res) => {
 app.get('/3wick', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'threewick.html'));
 });
-
+  
 app.get('/moncomiapi/createorder', async(req, res) => {
     
     const name = req.query.name;
@@ -84,7 +88,14 @@ app.get('/moncomiapi/createorder', async(req, res) => {
     const item = req.query.item;
     const message = req.query.text;
 
-    console.log(message);
+    const notificationMessage = `NEW ENQUIRY \n\n NAME: ${name} \n PHONE: ${phone} \n ITEM: ${item} \n MESSAGE: ${message}`
+    twilioClient.messages
+    .create({
+        body: notificationMessage,
+        from: process.env.TWILIO_NUMBER,
+        to: '07976641810',
+    });
+
 
     try {
 
