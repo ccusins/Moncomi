@@ -101,7 +101,7 @@ app.get('/moncomiapi/createorder', async(req, res) => {
 
         await axios.get(`https://moncomi.pythonanywhere.com/createorder/${name}/${phone}/${email}/${item}/${message}`)
 
-        res.send(`<div class="border border-green-400 px-8 py-4 rounded text-white text-lg font-bold">Your enquiry was successfully receieved! Expect a text or email ASAP.</div>`)
+        res.send(`<div class="border border-green-400 px-8 py-4 rounded text-white text-lg font-bold">Your enquiry was successfully received! Expect a text or email ASAP.</div>`)
 
     } catch(error) {
 
