@@ -1690,9 +1690,6 @@ html:has(.drawer-toggle:checked) {
 .w-screen {
   width: 100vw;
 }
-.w-\[95\%\] {
-  width: 95%;
-}
 .flex-none {
   flex: none;
 }
@@ -1740,6 +1737,9 @@ html:has(.drawer-toggle:checked) {
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-2 {
+  gap: 0.5rem;
 }
 .rounded {
   border-radius: 0.25rem;
@@ -1800,6 +1800,12 @@ html:has(.drawer-toggle:checked) {
 }
 .p-2 {
   padding: 0.5rem;
+}
+.p-8 {
+  padding: 2rem;
+}
+.p-16 {
+  padding: 4rem;
 }
 .px-16 {
   padding-left: 4rem;
@@ -1872,6 +1878,10 @@ html:has(.drawer-toggle:checked) {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 .font-bold {
   font-weight: 700;

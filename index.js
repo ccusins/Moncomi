@@ -20,6 +20,10 @@ app.get('/diffusers', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'diffusers.html'));
 });
 
+app.get('/order', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'order_processing.html'));
+});
+
 app.get('/candles', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'candles.html'));
 });

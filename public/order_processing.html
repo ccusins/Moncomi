@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gray-100">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="./tailwind/styles.css" rel="stylesheet">
+    <title>Moncomi</title>
+<body class="flex flex-col gap-8">
+
+    <div class="drawer">
+        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
+        <div class="drawer-content flex flex-col">
+          <div class="w-full navbar bg-black py-4">
+            <div class="flex-none lg:hidden">
+              <label for="my-drawer-3" aria-label="open sidebar" class="bg-zinc-800 rounded p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-justify"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+              </label>
+            </div> 
+            <div class="flex-none hidden lg:block">
+              <ul class="menu menu-horizontal px-16">
+                <li><a href="/" class="text-white text-2xl">Home</a></li>
+                <li><a href="/candles" class="text-white text-2xl">Candles</a></li>
+                <li><a href="/diffusers" class="text-white text-2xl">Diffusers</a></li>
+                <li><a href="/votives" class="text-white text-2xl">Mini Votives</a></li>
+                <li><a href="/3wick" class="text-white text-2xl">3-Wick Candles</a></li>
+                <li><a href="/order" class="text-white text-2xl">Order Process</a></li>
+              </ul>
+            </div>
+          </div>    
+        </div> 
+        <div class="drawer-side">
+          <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
+          <ul class="menu px-8 py-16 w-80 min-h-full bg-black gap-4">
+            <li><a href="/" class="text-white text-2xl">Home</a></li>
+            <li><a href="/candles" class="text-white text-2xl">Candles</a></li>
+            <li><a href="/diffusers" class="text-white text-2xl">Diffusers</a></li>
+            <li><a href="/votives" class="text-white text-2xl">Mini Votives</a></li>
+            <li><a href="/3wick" class="text-white text-2xl">3-Wick Candles</a></li>
+            <li><a href="/order" class="text-white text-2xl">Order Process</a></li>
+            <div class="h-[1px] bg-white rounded w-[80%]"></div>
+            <p class="text-white text-lg font-bold">info@moncomi.com</p>
+          </ul>
+        </div>
+    </div>
+
+    <div class="p-16 flex flex-col gap-8">
+        <div class="text-3xl font-bold text-black">How Do I Order?</div>
+        <div class="flex flex-col gap-4">
+            <div class="flex flex-row gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg><div class="text-black text-lg">If you would like to place an order, please fill in the enquiry form on the relevant product page and we will be back in touch very shortly via text/whatsapp or email.</div></div>
+            <div class="flex flex-row gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg><div class="text-black text-lg">If you are local to Harpenden, we offer free next-day delivery.</div></div>
+            <div class="flex flex-row gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg><div class="text-black text-lg">For postal orders , there is a small delivery charge of £1.95.</div></div>
+            <div class="flex flex-row gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dot"><circle cx="12.1" cy="12.1" r="1"/></svg><div class="text-black text-lg">Payment can be made by wire transfer once we’ve received your order.</div></div>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>
