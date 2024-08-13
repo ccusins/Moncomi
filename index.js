@@ -108,7 +108,7 @@ app.get('/moncomiapi/createorder', async(req, res) => {
         res.send(`<div class="border border-green-400 px-8 py-4 rounded text-white text-lg font-bold">Your enquiry was successfully received! Expect a text or email ASAP.</div>`)
 
     } catch(error) {
-
+        print(error)
         res.send(`<div class="border border-red-400 px-8 py-4 rounded text-white text-lg font-bold">There was an error receiving your enquiry, please refresh and try again.</div>`)
 
     }
