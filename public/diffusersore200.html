@@ -84,7 +84,13 @@
         
     </div>
     <div class="flex flex-col lg:flex-row w-[100%] justify-center items-center lg:items-stretch gap-8 px-8">
-      <form hx-get="/moncomiapi/createorder" hx-trigger="submit" hx-vals='{"item": "ORE Diffuser 200"}' hx-swap="beforeend" class="bg-black rounded px-8 py-8 w-[100%] lg:w-[50%] flex flex-col gap-4 items-start" action="">
+      <form 
+    hx-post="/moncomiapi/createorder" 
+    hx-trigger="submit" 
+    hx-vals='{"item": "ORE Diffuser 200"}' 
+    hx-swap="beforeend" 
+    class="bg-black rounded px-8 py-8 w-[100%] lg:w-[50%] flex flex-col gap-4 items-start"
+>
         <div class="text-white text-3xl font-bold">Make An Enquiry</div>
         <div class="text-white text-lg">We'll aim to reply within 24 hours to arrange your order!</div>
         <div class="text-white text-lg">Name</div>

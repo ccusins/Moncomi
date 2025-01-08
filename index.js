@@ -1,6 +1,8 @@
 require("dotenv").config();
 const express = require('express');
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 const path = require('path');
 const axios = require('axios');
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
@@ -104,32 +106,40 @@ app.get('/3wick', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'threewick.html'));
 });
   
-app.get('/moncomiapi/createorder', async(req, res) => {
+app.post('/moncomiapi/createorder', async(req, res) => {
     
-    const name = req.query.name;
-    const phone = req.query.phone;
-    const email = req.query.email;
-    const item = req.query.item;
-    const message = req.query.text;
+    const { name, phone, email, item, text: message } = req.body;
 
-    const notificationMessage = `NEW ENQUIRY \n\n NAME: ${name} \n PHONE: ${phone} \n ITEM: ${item} \n MESSAGE: ${message}`
-    twilioClient.messages
-    .create({
-        body: notificationMessage,
-        from: process.env.TWILIO_NUMBER,
-        to: '07976641810',
-    });
+    // const notificationMessage = `NEW ENQUIRY \n\n NAME: ${name} \n PHONE: ${phone} \n ITEM: ${item} \n MESSAGE: ${message}`
+    // twilioClient.messages
+    // .create({
+    //     body: notificationMessage,
+    //     from: process.env.TWILIO_NUMBER,
+    //     to: '07976641810',
+    // });
 
 
     try {
 
-        await axios.get(`https://moncomi.pythonanywhere.com/createorder/${name}/${phone}/${email}/${item}/${message}`)
+        await axios.post('https://moncomi.pythonanywhere.com/createorder', {
+            name,
+            phone,
+            email,
+            item,
+            message
+        });
 
         res.send(`<div class="border border-green-400 px-8 py-4 rounded text-white text-lg font-bold">Your enquiry was successfully received! Expect a text or email ASAP.</div>`)
 
     } catch(error) {
-        print(error)
-        res.send(`<div class="border border-red-400 px-8 py-4 rounded text-white text-lg font-bold">There was an error receiving your enquiry, please refresh and try again.</div>`)
+        // console.log(error.data.message)
+        const errorMessage = error.response.data.message;
+        if (errorMessage === 'Duplicate enquiry detected. Please check your records.') {
+            res.send(`<div class="border border-red-400 px-8 py-4 rounded text-white text-lg font-bold">You have already submitted this enquiry for this item!</div>`)    
+        } else {
+            res.send(`<div class="border border-red-400 px-8 py-4 rounded text-white text-lg font-bold">There was an error receiving your enquiry, please refresh and try again.</div>`)
+        }
+        
 
     }
 
