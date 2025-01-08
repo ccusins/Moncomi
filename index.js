@@ -110,13 +110,13 @@ app.post('/moncomiapi/createorder', async(req, res) => {
     
     const { name, phone, email, item, text: message } = req.body;
 
-    // const notificationMessage = `NEW ENQUIRY \n\n NAME: ${name} \n PHONE: ${phone} \n ITEM: ${item} \n MESSAGE: ${message}`
-    // twilioClient.messages
-    // .create({
-    //     body: notificationMessage,
-    //     from: process.env.TWILIO_NUMBER,
-    //     to: '07976641810',
-    // });
+    const notificationMessage = `NEW ENQUIRY \n\n NAME: ${name} \n PHONE: ${phone} \n ITEM: ${item} \n MESSAGE: ${message}`
+    twilioClient.messages
+    .create({
+        body: notificationMessage,
+        from: process.env.TWILIO_NUMBER,
+        to: '07976641810',
+    });
 
 
     try {
