@@ -64,6 +64,26 @@ app.get('/diffusersore200', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'diffusersore200.html'));
 });
 
+app.get('/diffusersspirit200', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'diffusersspirit200.html'));
+});
+
+app.get('/diffusersot200', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'diffusersot200.html'));
+});
+
+app.get('/diffusersocc200', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'diffusersocc200.html'));
+});
+
+app.get('/diffuserspaf200', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'diffuserspaf200.html'));
+});
+
+app.get('/diffusersgl200', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'diffusersgl200.html'));
+});
+
 app.get('/diffusersvro100', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'diffusersvro100.html'));
 });
