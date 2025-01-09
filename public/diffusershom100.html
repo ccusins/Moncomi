@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link href="./tailwind/styles.css" rel="stylesheet">
     <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+    <script defer="" src="./submitButton.js"></script>
     <title>Moncomi</title>
 </head>
 <body class="flex flex-col pb-8">
@@ -84,7 +85,8 @@
         
     </div>
     <div class="flex flex-col lg:flex-row w-[100%] justify-center items-center lg:items-stretch gap-8 px-8">
-      <form 
+      <form
+      id="enquiryForm" 
     hx-post="/moncomiapi/createorder" 
     hx-trigger="submit" 
     hx-vals='{"item": "HOM Diffuser 100"}' 
@@ -103,7 +105,13 @@
         <textarea name="text" class="textarea bg-zinc-800 textarea-bordered w-[100%]" placeholder="Enter Your Message Here"></textarea>
         <div class="text-white text-lg">Your Message</div>
         <textarea name="text" class="textarea bg-zinc-800 textarea-bordered w-[100%] text-white" placeholder="Enter Your Message Here"></textarea>
-        <button class="border border-white rounded text-white px-8 py-2 font-bold text-lg transition-transform duration-300 hover:scale-[102%] hover:bg-zinc-800">Submit</button>
+        <button 
+        type="submit"
+        id="submitButton"
+        class="border border-white rounded text-white px-8 py-2 font-bold text-lg transition-transform duration-300 hover:scale-[102%] hover:bg-zinc-800"
+    >
+        Submit
+    </button>
       </form>
       <div class="w-[100%] lg:w-[50%] border border-black rounded px-8 py-8 flex flex-col items-start justify-between gap-8">
         <div class="text-black text-3xl font-bold">Care Instructions</div>

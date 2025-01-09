@@ -105,7 +105,7 @@ app.get('/votives', (req, res) => {
 app.get('/3wick', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'threewick.html'));
 });
-  
+
 app.post('/moncomiapi/createorder', async(req, res) => {
     
     const { name, phone, email, item, text: message } = req.body;
@@ -132,7 +132,6 @@ app.post('/moncomiapi/createorder', async(req, res) => {
         res.send(`<div class="border border-green-400 px-8 py-4 rounded text-white text-lg font-bold">Your enquiry was successfully received! Expect a text or email ASAP.</div>`)
 
     } catch(error) {
-        // console.log(error.data.message)
         const errorMessage = error.response.data.message;
         if (errorMessage === 'Duplicate enquiry detected. Please check your records.') {
             res.send(`<div class="border border-red-400 px-8 py-4 rounded text-white text-lg font-bold">You have already submitted this enquiry for this item!</div>`)    
@@ -160,8 +159,30 @@ app.get('/moncomiapi/orderreplied', async(req, res) => {
 
 });
 
+app.get('/moncomiapi/deleteorder', async(req, res) => {
+    const id = req.query.id;
+
+    await axios.get(`https://moncomi.pythonanywhere.com/deleteorder/${id}`)
+
+    res.send('');
+
+});
+
 app.get('/moncomiapi/getorders', async(req, res) => {
-    const response = await axios.get(`https://moncomi.pythonanywhere.com/getorders`)
+
+    const status = req.query.status || 'all';
+    let apiEndpoint = '';
+
+    if (status === 'replied') {
+        apiEndpoint = 'https://moncomi.pythonanywhere.com/getorders/replied';
+    } else if (status === 'unreplied') {
+        apiEndpoint = 'https://moncomi.pythonanywhere.com/getorders/unreplied';
+    } else {
+        apiEndpoint = 'https://moncomi.pythonanywhere.com/getorders/all';
+    }
+
+    const response = await axios.get(apiEndpoint);
+
     const data = response.data;
 
     const orders = data.orders;
@@ -182,6 +203,7 @@ app.get('/moncomiapi/getorders', async(req, res) => {
             statusDiv = `
             <div class='flex flex-row gap-4'>
                 ${badgeDiv}
+                <button hx-get='/moncomiapi/deleteorder' hx-trigger='click' hx-target='#status${order.id}' hx-swap="outerHTML" hx-vals='{"id": "${order.id}"}' class="flex flex-row gap-4 items-center rounded p-2 bg-red-400 text-black font-bold text-lg transition-transform duration-300 hover:scale-[102%] hover:bg-gray-100">Delete<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg></button>
             </div>
             `
         }

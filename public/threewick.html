@@ -10,6 +10,7 @@
     <link href="./tailwind/styles.css" rel="stylesheet">
     <script defer="" src="js/imgSwitch3.js"></script>
     <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+    <script defer="" src="./submitButton.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         const vroSwitch = document.querySelector('#vro-switch');
@@ -99,7 +100,7 @@
                   </div>
                   
                 </div>
-                <div class="text-black text-2xl font-bold">£60</div>
+                <div class="text-black text-2xl font-bold">£65</div>
                 <div class="text-black text-lg w-[100%]">Average Burn Time 80 Hours</div>
             </div>
         
@@ -126,7 +127,8 @@
         
     </div>
     <div class="flex flex-col lg:flex-row w-[100%] justify-center items-center lg:items-stretch gap-8 px-8">
-      <form 
+      <form
+      id="enquiryForm" 
     hx-post="/moncomiapi/createorder" 
     hx-trigger="submit" 
     hx-vals='{"item": "3 Wick"}' 
@@ -143,7 +145,13 @@
         <input name="email" type="email" class="text-white px-6 py-3 w-[80%] bg-zinc-800 rounded text-lg transition-transform duration-200 hover:scale-[102%]" type="text" placeholder="Enter Your Email Address">
         <div class="text-white text-lg">Your Message</div>
         <textarea name="text" class="textarea bg-zinc-800 textarea-bordered w-[100%] text-white" placeholder="Enter Your Message Here"></textarea>
-        <button class="border border-white rounded text-white px-8 py-2 font-bold text-lg transition-transform duration-300 hover:scale-[102%] hover:bg-zinc-800">Submit</button>
+        <button 
+        type="submit"
+        id="submitButton"
+        class="border border-white rounded text-white px-8 py-2 font-bold text-lg transition-transform duration-300 hover:scale-[102%] hover:bg-zinc-800"
+    >
+        Submit
+    </button>
       </form>
       <div class="w-[100%] lg:w-[50%] border border-black rounded px-8 py-8 flex flex-col items-start justify-between gap-8">
         <div class="text-black text-3xl font-bold">Care Instructions</div>
