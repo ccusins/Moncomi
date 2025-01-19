@@ -159,13 +159,18 @@ app.get('/moncomiapi/orderreplied', async(req, res) => {
 
 });
 
-app.get('/moncomiapi/deleteorder', async(req, res) => {
-    const id = req.query.id;
+app.delete('/moncomiapi/deleteorder', async (req, res) => {
+    const id = req.body.id; 
 
-    await axios.get(`https://moncomi.pythonanywhere.com/deleteorder/${id}`)
+    try {
+        
+        await axios.delete(`https://moncomi.pythonanywhere.com/deleteorder/${id}`);
+        res.send('');
 
-    res.send('');
-
+    } catch (error) {
+        console.error('Error deleting order:', error);
+        res.send('')
+    }
 });
 
 app.get('/moncomiapi/getorders', async(req, res) => {
