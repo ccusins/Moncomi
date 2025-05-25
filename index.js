@@ -26,6 +26,18 @@ app.get('/order', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'order_processing.html'));
 });
 
+app.get('/roomSprays', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'roomsprays.html'));
+});
+
+app.get('/roomSprayVRO', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'roomsprayvro.html'));
+});
+
+app.get('/roomSprayTPC', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'roomSprayTPC.html'));
+});
+
 app.get('/candles', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'candles.html'));
 });
