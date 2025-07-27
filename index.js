@@ -102,6 +102,10 @@ app.get('/diffusersvro100', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'diffusersvro100.html'));
 });
 
+app.get('/diffusersserenity200', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'diffusersserenity200.html'));
+});
+
 app.get('/diffusersvro200', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'diffusersvro200.html'));
 });
